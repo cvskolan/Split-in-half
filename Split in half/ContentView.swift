@@ -15,8 +15,8 @@ struct ContentView: View {
     @State var wordCount1:Int?
     @State var wordCount2:Int?
     
-    @State var shiftTextLeft = ""
-    @State var shifTextRight = ""
+    @State var row1 = ""
+    @State var row2 = ""
     
     
     struct Splitter {
@@ -136,8 +136,8 @@ struct ContentView: View {
                                 wordCount2 = result[1].count
                                 textOutput = result[2]
                                 
-                                shiftTextLeft = result[0]
-                                shifTextRight = result[1]
+                                row1 = result[0]
+                                row2 = result[1]
 
                             }
                         } catch {
@@ -152,13 +152,12 @@ struct ContentView: View {
                 
                     if textInput != "" {
                         
-                        
-                        print (getFirstWord (str: shiftTextLeft))
-                        
-    //                    shifTextRight += " " + "nyord"
+                        row1 = row1 + " " + getFirstWord (str: row2)
+                        row2 = removeFirstWord(str: row2)
+
                         textOutput = """
-                                    \(shiftTextLeft)
-                                    \(shifTextRight)
+                                    \(row1)
+                                    \(row2)
                                     """
                         
                     }
@@ -169,7 +168,7 @@ struct ContentView: View {
                 Button {
                     
                     if textInput != "" {
-                        print (getLastWord(str: shiftTextLeft))
+                        print (getLastWord(str: row1))
                     }
                     
                     

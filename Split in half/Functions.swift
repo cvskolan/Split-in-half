@@ -44,6 +44,19 @@ func getLastWord (str: String) -> String {
     return String(str.dropFirst(str.count - wordLength))
 }
 
+func removeFirstWord (str: String) -> String {
+
+    var i = 0
+    var char = getCharacter(str: str, nbr: i)
+    
+    while char != " " {
+        i += 1
+        char = getCharacter(str: str, nbr: i)
+    }
+    
+    return String(str.dropFirst(i + 1))
+}
+
 
 func getLastWord () -> String {
     
