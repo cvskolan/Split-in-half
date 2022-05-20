@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B240FE02837B5D100FA8C3A /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B240FDF2837B5D100FA8C3A /* Functions.swift */; };
 		0B5367812800712E0072CE7F /* Split_in_halfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5367802800712E0072CE7F /* Split_in_halfApp.swift */; };
 		0B5367832800712E0072CE7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5367822800712E0072CE7F /* ContentView.swift */; };
 		0B536785280071300072CE7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B536784280071300072CE7F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B240FDF2837B5D100FA8C3A /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		0B53677D2800712E0072CE7F /* Split in half.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split in half.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5367802800712E0072CE7F /* Split_in_halfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Split_in_halfApp.swift; sourceTree = "<group>"; };
 		0B5367822800712E0072CE7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				0B5367802800712E0072CE7F /* Split_in_halfApp.swift */,
 				0B5367822800712E0072CE7F /* ContentView.swift */,
+				0B240FDF2837B5D100FA8C3A /* Functions.swift */,
 				0B536784280071300072CE7F /* Assets.xcassets */,
 				0B536789280071300072CE7F /* Split_in_half.entitlements */,
 				0B536786280071300072CE7F /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				0B5367832800712E0072CE7F /* ContentView.swift in Sources */,
 				0B5367812800712E0072CE7F /* Split_in_halfApp.swift in Sources */,
+				0B240FE02837B5D100FA8C3A /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

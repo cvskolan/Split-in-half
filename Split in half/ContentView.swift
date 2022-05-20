@@ -25,12 +25,6 @@ struct ContentView: View {
             case justOneWord
         }
         
-        func getCharacter (str: String, nbr: Int)  -> Character {
-            //
-            
-            return str[str.index(str.startIndex, offsetBy: nbr)]
-            
-        }
 
         func splitInHalf (text: String) throws -> [String] {
             //    Returnerar rad1, rad 2 och en multiline i en array
@@ -104,8 +98,6 @@ struct ContentView: View {
     
     var body: some View {
         
-
-
         VStack(alignment: .leading, spacing: 10) {
                 Text("Perfect split")
                     .font(.title)
@@ -157,13 +149,31 @@ struct ContentView: View {
                     .padding()
             HStack {
                 Button {
-                    print (shiftTextLeft)
+                
+                    if textInput != "" {
+                        
+                        
+                        print (getFirstWord (str: shiftTextLeft))
+                        
+    //                    shifTextRight += " " + "nyord"
+                        textOutput = """
+                                    \(shiftTextLeft)
+                                    \(shifTextRight)
+                                    """
+                        
+                    }
                 } label: {
                     Image(systemName: "arrow.left")
                 }
                 
                 Button {
-                    print (shifTextRight)
+                    
+                    if textInput != "" {
+                        print (getLastWord(str: shiftTextLeft))
+                    }
+                    
+                    
+                    
                 } label: {
                     Image(systemName: "arrow.right")
                 }
