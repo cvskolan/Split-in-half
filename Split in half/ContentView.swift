@@ -102,25 +102,25 @@ struct ContentView: View {
         var shiftTextLeft = ""
         var shifTextRight = ""
 
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 10) {
                 Text("Perfect split")
                     .font(.title)
                     .multilineTextAlignment(.leading)
 
-                HStack {
-                    Text("Rad 1: ")
+                HStack (spacing: 0) {
+                    Text("Tecken rad 1: ")
+                        .bold()
                     Text(wordCount1 != nil ? String(wordCount1!) : "")
-                        .font(.title)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .bold()
                     .foregroundColor(Splitter().returnColor(nbr: wordCount1))
                 }
-                HStack {
-                    Text("Rad 2: ")
-                
+                HStack (spacing: 0) {
+                    Text("Tecken rad 2: ")
+                        .bold()
                 Text(wordCount2 != nil ? String(wordCount2!) : "")
-                    .font(.title)
+                    .bold()
                     .foregroundColor(Splitter().returnColor(nbr: wordCount2))
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+
                 }
                     
                 Spacer()
@@ -160,7 +160,7 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    print (shifTextRight)
+                    print ("shifTextRight")
                 } label: {
                     Image(systemName: "arrow.right")
                 }
