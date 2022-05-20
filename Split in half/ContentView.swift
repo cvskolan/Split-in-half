@@ -122,8 +122,6 @@ struct ContentView: View {
                     .foregroundColor(Splitter().returnColor(nbr: wordCount2))
 
                 }
-                    
-                Spacer()
                 
                 Text("Textrad att bryta")
                 
@@ -136,7 +134,8 @@ struct ContentView: View {
                             if textInput.count > 0 {
                                 let result = try Splitter().splitInHalf(text: textInput)
                                 
-//                                Uppdaterar wordcount samt visar den brutma eningen
+
+                                //Uppdaterar wordcount samt visar den brutna meningen
                                 wordCount1 = result[0].count
                                 wordCount2 = result[1].count
                                 textOutput = result[2]
@@ -154,7 +153,7 @@ struct ContentView: View {
                     .padding()
             HStack {
                 Button {
-                    print ("shiftTextLeft")
+                    print ("text1")
                 } label: {
                     Image(systemName: "arrow.left")
                 }
