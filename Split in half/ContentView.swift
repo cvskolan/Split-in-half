@@ -15,6 +15,10 @@ struct ContentView: View {
     @State var wordCount1:Int?
     @State var wordCount2:Int?
     
+    @State var shiftTextLeft = ""
+    @State var shifTextRight = ""
+    
+    
     struct Splitter {
         
         enum WordErrors : Error {
@@ -22,6 +26,7 @@ struct ContentView: View {
         }
         
         func getCharacter (str: String, nbr: Int)  -> Character {
+            //
             
             return str[str.index(str.startIndex, offsetBy: nbr)]
             
@@ -99,8 +104,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        var shiftTextLeft = ""
-        var shifTextRight = ""
+
 
         VStack(alignment: .leading, spacing: 10) {
                 Text("Perfect split")
@@ -153,13 +157,13 @@ struct ContentView: View {
                     .padding()
             HStack {
                 Button {
-                    print ("text1")
+                    print (shiftTextLeft)
                 } label: {
                     Image(systemName: "arrow.left")
                 }
                 
                 Button {
-                    print ("shifTextRight")
+                    print (shifTextRight)
                 } label: {
                     Image(systemName: "arrow.right")
                 }
