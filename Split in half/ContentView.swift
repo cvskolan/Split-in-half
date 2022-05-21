@@ -154,6 +154,10 @@ struct ContentView: View {
                         
                         row1 = row1 + " " + getFirstWord (str: row2)
                         row2 = removeFirstWord(str: row2)
+                        
+
+                        wordCount1 = row1.count
+                        wordCount2 = row2.count
 
                         textOutput = """
                                     \(row1)
@@ -168,7 +172,17 @@ struct ContentView: View {
                 Button {
                     
                     if textInput != "" {
-                        print (getLastWord(str: row1))
+                        
+                        row2 = getLastWord(str: row1) + " " + row2
+                        row1 = removeLastWord(str: row1)
+                        wordCount1 = row1.count
+                        wordCount2 = row2.count
+                        
+                        
+                        textOutput = """
+                                    \(row1)
+                                    \(row2)
+                                    """
                     }
                     
                     
